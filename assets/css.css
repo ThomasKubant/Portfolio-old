@@ -195,7 +195,7 @@ nav ul li {
     flex-wrap: wrap;
 }
 /* MEDIA QUERIES */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1300px) {
     
     .sidebar {
         opacity: 0;
