@@ -215,4 +215,7 @@ nav ul li {
         align-items: space-between;
         bottom: inherit;
     }
+    .project-image:hover ~ .project-text {
+        bottom: inherit;
+    }
 }
