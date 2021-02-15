@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --background-color: #FFE3E0;
+    --primary-color: #ef6351;
+    --secondary-color: #F38375;
+}
+body {
+    background-color: var(--background-color);
+}
+section {
+    padding: 120px;
+    width: 93%;
+    margin-left: 7%;
+}
+header {
+    display:flex;
+    width: 24.3%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-bottom: 450px;
+    padding-top: 5%;
+}
+header h1 {
+    padding-bottom: 0px;
+    font-size: 56px;
+    color: var(--primary-color);
+}
+header h2 {
+    color: var(--secondary-color);
+    padding-top: 15px;
+    font-size: 20px;
+    border-top: 3px solid var(--primary-color);
+}
+.sidebar {
+    display: flex;
+    width: 105px;
+    min-width: 75px;
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-right: 4px solid var(--primary-color);
+    justify-content: center;
+    text-align: center;
+}
+a img {
+    position: relative;
+    z-index: 99;
+}
+.nav-text {
+    position: relative;
+    top: -20px;
+    color: var(--primary-color);
+    transition: 1s;
+    z-index: 9;
+    text-align: center;
+    opacity: 0;
+}
+.sidebar-img:hover + .nav-text {
+    top: 0px;
+    opacity: 1;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+nav ul li {
+    list-style-type: none;
+}
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-me h1 {
+    color: var(--primary-color);
+    font-size: 50px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--primary-color);
+}
+.about-me p {
+    color: var(--secondary-color);
+    font-size: 22px;
+    text-align: center;
+}
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skills h1 {
+    color: var(--primary-color);
+    font-size: 50px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--primary-color);
+}
+.skills p {
+    color: var(--primary-color);
+    font-size: 22px;
+    text-align: center;
+}
+.skills div {
+    padding: 10px;
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projects h1 {
+    color: var(--primary-color);
+    font-size: 50px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--primary-color);
+}
+.project ul {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.project ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.project img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.project-image {
+    margin: 0px 10px;
+    filter: blur(2px);
+    z-index: 9999;
+}
+.project-text {
+    color: var(--primary-color);
+    transition: 1s;
+    z-index: 9;
+    position: absolute;
+    bottom: 5px;
+}
+.project-image:hover {
+    filter: blur(0px);
+}
+.project-image:hover ~ .project-text {
+    bottom: -40px;
+}
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.contact-me h1 {
+    color: var(--primary-color);
+    font-size: 50px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--primary-color);
+}
+.contact-me h2 {
+    color: var(--secondary-color);
+}
+.contact-me img {
+    width: 75px;
+    height: 75px;
+    object-fit: scale-down;
+}
+.social ul {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.social ul li {
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 1080px) {
+    
+    .sidebar {
+        opacity: 0;
+    }
+    section {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .project-image {
+        padding: 25px 0px;
+        filter: blur(0px);
+    }
+    .project ul {
+        justify-content: center;
+    }
+    .project-text {
+        align-items: space-between;
+        bottom: inherit;
+    }
+}
